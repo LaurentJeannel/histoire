@@ -1,0 +1,14 @@
+<item>raconte l'histoire de La cigale et la fourmi<tag>data.histoire="1";data.histoirechemin="La cigale et la fourmi"</tag></item>
+<item>raconte l'histoire Le Lievre Et La Tortue<tag>data.histoire="1";data.histoirechemin="Le Lievre Et La Tortue"</tag></item>
+
+<item>raconte l'histoire Le maître du silence chapitre 1<tag>data.histoire="1";data.histoirechemin="Le maître du silence/Le_maitre_du_silence-01-10"</tag></item>
+<item>raconte l'histoire Le maître du silence chapitre 2<tag>data.histoire="1";data.histoirechemin="Le maître du silence/Le_maitre_du_silence-02-10"</tag></item>
+
+<item>arrête l'histoire<tag>data.histoire="0"</tag></item>
+
+<item>mets en pause l'histoire<tag>data.histoire="2"</tag></item>
+<item>reprends l'histoire<tag>data.histoire="3"</tag></item>
+
+
+<item>lecture du livre Le Chien des Baskerville<tag>data.histoire="55";data.histoirechemin="Le Chien des Baskerville"</tag></item>
+<item>arrête la lecture du livre<tag>data.histoire="0"</tag></item>
