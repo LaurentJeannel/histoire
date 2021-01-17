@@ -50,25 +50,28 @@ bat.on('exit', (code) => {console.log(`Child exited with code ${code}`);});
 
 	epub.on("end", (err)=>{
   //  	console.log("METADATA:\n");
-   		//console.log(epub.metadata);
+   		console.log(epub.metadata);
 
     //	console.log("\nSPINE:\n");
-   		//console.log(epub.flow);
+   		console.log(epub.flow);
 console.log(epub.spine.contents.length,' chapitres');
 var chapdepart=0 ; var nbchap=0
   for(var i=0;i<epub.spine.contents.length;i++){
   	//console.log()
-  	if(epub.spine.contents[i].id.search('chap')>-1){nbchap=nbchap+1
+  	if( (epub.spine.contents[i].id.search('chap')>-1) || (epub.spine.contents[i].id.search('Chap')>-1) || (epub.spine.contents[i].id.search('main')>-1) ){
+  		nbchap=nbchap+1
   		console.log(epub.spine.contents[i].id+"  "+i+"  "+epub.spine.contents[i].id.search('chap'))
   	}
   	else{if(nbchap==0){chapdepart=chapdepart+1}}
   }//fin for
 
 JarvisAskMe('il y a '+nbchap+' paragraphe , quel paragraphe veux tu ?',(result)=>{
-	result=result.replace(new RegExp("[^0-9]", 'ig'),"");console.log(result,chapdepart)
+	try{result=result.replace(new RegExp("[^0-9]", 'ig'),"");console.log(result,chapdepart)
 	result=eval(result)+chapdepart-1
 console.log(result)
 //return
+}
+catch(err){return}
     // get first chapter
     	epub.getChapter(epub.spine.contents[result].id, (err, data)=>{
         	if(err){ console.log(err);return;}
